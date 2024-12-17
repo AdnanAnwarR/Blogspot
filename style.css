@@ -266,4 +266,105 @@ body {
   font-size: 14px;
 }
 
+.skill h4 {
+  margin-top: 30px;
+  color: #2563eb;
+  font-size: 1.5rem;
+  text-align: left;
+  border-bottom: 2px solid #2563eb;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
 /* skill end */
+
+/* projek start */
+
+.portfolio {
+  text-align: center;
+  padding: 50px;
+  background: #fff;
+  margin-bottom: 20px;
+}
+
+.portfolio h1 {
+  text-align: center;
+  color: var(--main-color);
+  margin-bottom: 30px;
+  font-size: 2.5em;
+}
+
+.portfolio-items {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.portfolio-item {
+  background-color: lightskyblue;
+  margin: 5px;
+  border: 3px solid #2563eb;
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 20px;
+  transition: transform 0.3s ease;
+}
+
+.portfolio-item:hover {
+  transform: scale(1.05);
+}
+
+.portfolio-item img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+  border: solid var(--text-color);
+}
+
+.portfolio-item h3 {
+  margin: 15px 0 20px 0;
+  font-size: 1em;
+  color: #2563eb;
+}
+
+.portfolio-item h4 {
+  font-size: 0.7em;
+  margin-bottom: 10px;
+}
+
+.portfolio-item p {
+  font-size: 0.9em;
+  color: var(--main-color);
+}
+
+/* Warna sesuai teknologi */
+.html {
+  color: #e34c26; /* Warna HTML (Orange) */
+  font-weight: bold;
+}
+
+.css {
+  color: #264de4; /* Warna CSS (Biru) */
+  font-weight: bold;
+}
+
+.js {
+  color: #f7df1e; /* Warna JavaScript (Kuning) */
+  font-weight: bold;
+}
+
+.bootstrap {
+  color: #563d7c; /* Warna Bootstrap (Ungu) */
+  font-weight: bold;
+}
+
+/* Responsive Design */
+
+@media (max-width: 1024px) {
+  .portfolio-items {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+/* projek end */
