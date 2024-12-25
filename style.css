@@ -98,6 +98,55 @@ body {
   display: block;
 }
 
+/* dropdown spesial start*/
+
+.learning-dropdown .dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #2563eb;
+  list-style: none;
+  padding: 10px 0;
+  border-radius: 5px;
+  display: none;
+  z-index: 1000;
+}
+
+/* Submenu */
+.learning-dropdown .submenu {
+  top: 0;
+  left: 100%;
+  background-color: #1e3a8a;
+  list-style: none;
+  padding: 10px 0;
+  border-radius: 5px;
+  display: none;
+  z-index: 1000;
+  min-width: 150px;
+}
+
+.learning-dropdown .dropdown:hover > .dropdown-menu,
+.learning-dropdown .word-dropdown:hover > .submenu,
+.learning-dropdown .excel-dropdown:hover > .submenu {
+  display: block;
+}
+
+/* Link Styling */
+.learning-dropdown a,
+.learning-dropdown .submenu a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  transition: background-color 0.3s ease;
+}
+
+.learning-dropdown a:hover,
+.learning-dropdown .submenu a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* dropdown spesial end */
+
 /* dropdown end */
 
 /* //berita start */
@@ -118,13 +167,12 @@ body {
 }
 
 .container-berita {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
 }
 
 .body-berita {
   background-color: white;
+  margin: 40px;
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
