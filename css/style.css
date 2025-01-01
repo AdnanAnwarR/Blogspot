@@ -31,8 +31,8 @@ body {
 
 .logo img {
   margin-right: 10px;
-  width: 40px;
-  height: 40px;
+  width: 80px;
+  height: 45px;
 }
 
 .nav-links {
@@ -97,55 +97,6 @@ body {
 .dropdown:hover .dropdown-menu {
   display: block;
 }
-
-/* dropdown spesial start*/
-
-.learning-dropdown .dropdown-menu {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: #2563eb;
-  list-style: none;
-  padding: 10px 0;
-  border-radius: 5px;
-  display: none;
-  z-index: 1000;
-}
-
-/* Submenu */
-.learning-dropdown .submenu {
-  top: 0;
-  left: 100%;
-  background-color: #1e3a8a;
-  list-style: none;
-  padding: 10px 0;
-  border-radius: 5px;
-  display: none;
-  z-index: 1000;
-  min-width: 150px;
-}
-
-.learning-dropdown .dropdown:hover > .dropdown-menu,
-.learning-dropdown .word-dropdown:hover > .submenu,
-.learning-dropdown .excel-dropdown:hover > .submenu {
-  display: block;
-}
-
-/* Link Styling */
-.learning-dropdown a,
-.learning-dropdown .submenu a {
-  color: white;
-  text-decoration: none;
-  padding: 10px 15px;
-  transition: background-color 0.3s ease;
-}
-
-.learning-dropdown a:hover,
-.learning-dropdown .submenu a:hover {
-  background-color: rgba(255, 255, 255, 0.2);
-}
-
-/* dropdown spesial end */
 
 /* dropdown end */
 
@@ -343,14 +294,16 @@ body {
 }
 
 .portfolio-items {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  flex-wrap: wrap;
   gap: 20px;
+  justify-content: center;
+  align-items: center;
 }
 
 .portfolio-item {
   background-color: lightskyblue;
-  margin: 5px;
+  width: 304px;
   border: 3px solid #2563eb;
   border-radius: 10px;
   overflow: hidden;
@@ -407,14 +360,6 @@ body {
   font-weight: bold;
 }
 
-/* Responsive Design */
-
-@media (max-width: 1024px) {
-  .portfolio-items {
-    grid-template-columns: repeat(1, 1fr);
-  }
-}
-
 /* projek end */
 
 /* musik start */
@@ -430,8 +375,8 @@ body {
 }
 
 .music-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+
   gap: 20px;
   max-width: 1200px;
   margin: 0 auto;
@@ -439,6 +384,7 @@ body {
 
 .music-card {
   background-color: white;
+  width: 100%;
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -453,6 +399,7 @@ body {
   width: 100%;
   height: 250px;
   position: relative;
+  aspect-ratio: 16/9;
 }
 
 .music-image img {
@@ -493,10 +440,60 @@ body {
   color: white;
 }
 
-@media (max-width: 768px) {
-  .music-grid {
-    grid-template-columns: 1fr;
-  }
+/* musik end */
+
+/* learning start */
+
+.word {
+  display: flex;
+  justify-content: center;
 }
 
-/* musik end */
+.container-word {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.foto-word {
+  width: 100%;
+  margin: 20px 0;
+}
+
+.foto-word img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+}
+
+.keterangan-word {
+  margin: 20px 0;
+}
+
+.keterangan-word table {
+  width: 100%;
+  max-width: 500px;
+
+  margin: 0 auto;
+  border-collapse: collapse;
+}
+
+.keterangan-word table,
+.keterangan-word th,
+.keterangan-word td {
+  border: 1px solid black;
+}
+
+.keterangan-word td {
+  padding: 10px;
+  text-align: center;
+  width: 250px;
+}
+
+.keterangan-word th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+}
+
+/* learning end */
